@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HMI Editor</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Formatting.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="Batch.css" media="screen"/>
+    <script src="Batch.js" type="text/javascript" id="table_style" defer></script>
+    </head>
+
+    <body>
+      <!-- top navigation-->
+      <div class="topnav">
+        <a href="/Convert">txt → csv</a>
+        <a href="/ConvertBack">csv → txt</a>
+        <a href="/xmlUpload">xml → csv</a>
+        <a href="/Overview">Overview</a>
+        <a class="active" href="/BatchCompare">Batch Compare</a>
+        <a href="/Contact">Help</a>
+        <a class="topnav_img" href="https://boysen-online.de/en/sites/usa/gaffney/" target="_blank"><img style="max-height: 48px; padding-bottom: 0% !important;" src="https://boysen-online.de/fileadmin/bilder/standorte/logos/gaffney_logo.jpg"  alt="Boysen USA"></a>
+      </div>
+
+        <table id="mainContent">
+          <tr>
+            <td rowspan="2"><h4>Master Files</h4><br><input style="margin-left: 8%;" type="file" multiple id="input1"></td>
+            <td><input type="button" onclick="Compare()" value="Compare Files" style="text-align: center;"/></td>
+            <td rowspan="2"><h4>Current Files</h4><br><input style="margin-left: 8%;" type="file" multiple id="input2"></td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="PrintTable()" value="Print Current Table" style="text-align: center;"/><button onclick="window.location.reload();">Refresh Table</button></td>
+          </tr>
+        </table>
+<div id="scrollingTable" style="overflow-x: auto;"><table border="1" id="table"></table></div>
+
+
+      <footer onclick="THide(3)" id="foot">
+        <h4>Information: (click to hide)</h4>
+       <p>This is a program created by Joshua Greeff that takes the file exported from your machine (usually in the form of a txt file) and converts/translates it to an MS Excel document so you can edit it. After doing so, you have the option to also convert it back.</p>
+      </footer>
+    </body>
+</html>

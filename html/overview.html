@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HMI Editor</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Formatting.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="Batch.css" media="screen"/>
+    <script src="overview.js" type="text/javascript" id="table_style" defer></script>
+    </head>
+
+    <body>
+      <!-- top navigation-->
+      <div class="topnav">
+        <a href="/Convert">txt → csv</a>
+        <a href="/ConvertBack">csv → txt</a>
+        <a href="/xmlUpload">xml → csv</a>
+        <a class="active" href="/Overview">Overview</a>
+        <a href="/BatchCompare">Batch Compare</a>
+        <a href="/Contact">Help</a>
+        <a class="topnav_img" href="https://boysen-online.de/en/sites/usa/gaffney/" target="_blank"><img style="max-height: 48px; padding-bottom: 0% !important;" src="https://boysen-online.de/fileadmin/bilder/standorte/logos/gaffney_logo.jpg"  alt="Boysen USA"></a>
+      </div>
+
+<!-- sidebar -->
+<div class="sidebar" style="margin-right: 8px;">
+  <a href="./data/SetupMaster.xlsx" class="links">Excel Setup Sheet</a>
+  <p>
+      The Overview can also be used to create a Setup Sheet for the Machines. The instructions and sheet are in the file above! <br><br>Note: "Collapse Table" may effect the Setup Sheet (untested), so I advise to keep it off unless you are printing the overview as is.
+  </p>
+</div>
+      <div id="mainTable">
+        <table id="mainContent">
+          <tr>
+            <td rowspan="0"><h4>Master Files</h4><h5><input onclick="ToggleCollapse()" type="checkbox">Collapse Table (saves space and paper)</h5><br><input style="margin-left: 8%;" type="file" multiple id="input1"><br><br><div style="margin-bottom: 8px;"><a href="" id="y" class="links">click here to download overview</a></div></td>
+            <td rowspan="0"><h4>File List:</h4><br>
+              <div id="fileList" style="padding: 0px 5px 0px 5px; width: fit-content; max-width: 45%; margin-right: auto; margin-left: auto; overflow: auto;">
+                <p id="fileListp" style="text-align: left;">...</p></div></td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+        </table>
+      </div>
+
+      <footer onclick="THide(3)" id="foot">
+        <h4>Information: (click to hide)</h4>
+        <p>This is a program created by Joshua Greeff that takes the file exported from your machine (usually in the form of a txt file) and converts/translates it to an MS Excel document so you can edit it. After doing so, you have the option to also convert it back.</p>
+      </footer>
+    </body>
+</html>

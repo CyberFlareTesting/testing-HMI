@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HMI Editor</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Formatting.css" media="screen"/>
+    <script src="source.js" type="text/javascript"></script>
+    </head>
+
+    <body onload="checkFileAPI();">
+      <!-- top navigation-->
+      <div class="topnav">
+        <a href="/Convert">txt → csv</a>
+        <a href="/ConvertBack">csv → txt</a>
+        <a href="/xmlUpload">xml → csv</a>
+        <a href="/Overview">Overview</a>
+        <a href="/BatchCompare">Batch Compare</a>
+        <a class="active" href="/Contact">Help</a>
+        <a class="topnav_img" href="https://boysen-online.de/en/sites/usa/gaffney/" target="_blank"><img style="max-height: 48px; padding-bottom: 0% !important;" src="https://boysen-online.de/fileadmin/bilder/standorte/logos/gaffney_logo.jpg"  alt="Boysen USA"></a>
+      </div>
+
+<div style="margin: 8px;">
+
+    <!-- main body -->
+      <div id="container" style="margin-right: 50% !important">   
+        <p>
+            If changes/updates need to be made to this or any errors are found, please open an issue <a href="https://github.com/CyberFlareCoding/HMI-Editor/issues">here</a>.
+    <br/><br/>
+          To download a copy of this program go to <a href="https://github.com/CyberFlareCoding/HMI-Editor">my Github</a>.  
+    <br/><br/>
+      If you need help figuring out how to use this program, you may find tips and instructions on the github or you can ask someone who knows. 
+      If none of those options are helpful enough then open an issue <a href="https://github.com/CyberFlareCoding/HMI-Editor/issues">here</a> or send me a message through <a href="https://discord.com/channels/872545686934138991/872545688121131105">Discord</a> (if you have it already) and you will recieve a response within a day or two (or maybe a few days if you do it through github).
+    <br/><br/>
+          Sometimes you may need to compare two xml files (for certain machines), unfortunately this program does not support that function. But, you can compare the raw text of the file using <a href="https://codebeautify.org/file-diff">this</a>.
+        </p>
+      </div>
+</div>
+      <footer onclick="THide(3)" id="foot">
+        <h4>Information: (click to hide)</h4>
+        <p>This is a program created by Joshua Greeff that takes the file exported from your machine (usually in the form of a txt file) and converts/translates it to an MS Excel document so you can edit it. After doing so, you have the option to also convert it back.</p>
+      </footer>
+    </body>
+</html>

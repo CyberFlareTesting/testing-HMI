@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HMI Editor</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Formatting.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="Batch.css" media="screen"/>
+    <script src="source.js" type="text/javascript" defer></script>
+    <script src="xmlUpload.js" type="text/javascript" defer></script>
+    </head>
+
+    <body>
+      <!-- top navigation-->
+      <div class="topnav">
+        <a href="/Convert">txt → csv</a>
+        <a href="/ConvertBack">csv → txt</a>
+        <a class="active" href="/xmlUpload">xml → csv</a>
+        <a href="/Overview">Overview</a>
+        <a href="/BatchCompare">Batch Compare</a>
+        <a href="/Contact">Help</a>
+        <a class="topnav_img" href="https://boysen-online.de/en/sites/usa/gaffney/" target="_blank"><img style="max-height: 48px; padding-bottom: 0% !important;" src="https://boysen-online.de/fileadmin/bilder/standorte/logos/gaffney_logo.jpg"  alt="Boysen USA"></a>
+      </div>
+
+      <div style="margin: 8px;">
+        <!-- sidebar -->
+        <div class="sidebar">
+          <a href="SetupMaster(xml).xlsx" class="links">Excel Printout (xml.csv)</a>
+          <p>
+              If you are having trouble reading, finding information, or just want to neatly print out the csv document, please download this document and paste the csv document contents within the "raw data" sheet. (instructions are inside as well)
+          </p>
+      </div>
+  
+      <!-- main body -->
+        <div id="container">   
+            <h3>xml → csv file</h3>   
+            <input type="file" id="file-selector"/>
+            <a href="" id="download" class="links">click here to download</a>
+        </div>
+  </div>
+
+
+      <footer onclick="THide(3)" id="foot">
+        <h4>Information: (click to hide)</h4>
+       <p>This is a program created by Joshua Greeff that takes the file exported from your machine (usually in the form of a txt file) and converts/translates it to an MS Excel document so you can edit it. After doing so, you have the option to also convert it back.</p>
+      </footer>
+    </body>
+</html>

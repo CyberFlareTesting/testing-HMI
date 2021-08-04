@@ -1,0 +1,26 @@
+#mainContent{
+   width: 80%;
+   text-align: center;
+   background-color: white;
+   border: 3px solid #009fe3;
+   margin-left: auto; 
+   margin-right: auto;
+}
+
+#scrollingTable{
+   display: none;
+   position: absolute;
+   margin-left: auto;
+   margin-right: auto;
+   left: 0;
+   right: 0;
+   max-width: 80%;
+   background:white;
+   border: 3px solid #009fe3;
+   margin-top: 8px;
+}
+
+#mainTable{
+   margin-left: 1%;
+   margin-right: 30%;
+}
