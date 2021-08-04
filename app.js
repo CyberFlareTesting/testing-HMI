@@ -35,6 +35,10 @@ app.get('/Contact',function(req, res) {
     res.sendFile(__dirname + '/html/Contact.html')
 })
 
+app.get('/Form',function(req, res) {
+    res.sendFile(__dirname + '/html/Form.html')
+})
+
 // server
 app.listen(port, function () {
     console.log("Server is running on port "+ port);
