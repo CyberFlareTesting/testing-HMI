@@ -15,6 +15,26 @@ app.get('/Convert',function(req, res) {
     res.sendFile(__dirname + '/html/index.html')
 })
 
+app.get('/ConvertBack',function(req, res) {
+    res.sendFile(__dirname + '/html/ConvertBack.html')
+})
+
+app.get('/xmlUpload',function(req, res) {
+    res.sendFile(__dirname + '/html/xmlUpload.html')
+})
+
+app.get('/Overview',function(req, res) {
+    res.sendFile(__dirname + '/html/overview.html')
+})
+
+app.get('/BatchCompare',function(req, res) {
+    res.sendFile(__dirname + '/html/BatchUpload.html')
+})
+
+app.get('/Contact',function(req, res) {
+    res.sendFile(__dirname + '/html/Contact.html')
+})
+
 // server
 app.listen(port, function () {
     console.log("Server is running on port "+ port);
