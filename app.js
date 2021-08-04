@@ -39,8 +39,7 @@ app.get('/Form',function(req, res) {
     res.sendFile(__dirname + '/html/Form.html')
 })
 app.post('/Submit', (req, res) => {
-  res.send("POST Request Called")
-  res.end()
+    res.redirect('/Contact')
 })
 
 // server
