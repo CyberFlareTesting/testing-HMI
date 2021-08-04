@@ -38,6 +38,10 @@ app.get('/Contact',function(req, res) {
 app.get('/Form',function(req, res) {
     res.sendFile(__dirname + '/html/Form.html')
 })
+app.post('/Submit', (req, res) => {
+  res.send("POST Request Called")
+  res.end()
+})
 
 // server
 app.listen(port, function () {
