@@ -1,5 +1,12 @@
 const express = require("express")
 const app = express()
+    app.use(express.urlencoded({extended: true})); 
+    app.use(express.json());
+
+const Discord = require("discord.js");
+const Client = new Discord.Client();
+
+const DicordChannel = "872545688121131105"
 const port = process.env.PORT || 3000
 
 app.use(express.static(__dirname + "/css"));
@@ -39,10 +46,46 @@ app.get('/Form',function(req, res) {
     res.sendFile(__dirname + '/html/Form.html')
 })
 app.post('/Submit', (req, res) => {
+    const value = req.body
+    const pingValue = (value.Severity < 1)? "<@&872579999381733426>\n": ""
+
+    value.name = value.name || "Blank"
+    value.contact = value.contact || "Blank"
+    value.message = value.message || "Blank"
+
+    embed = MakeEmbed(value, pingValue)
+    Client.channels.cache.get(DicordChannel).send(embed)
     res.redirect('/Contact')
 })
+
+function MakeEmbed(value, pingValue){
+    return {
+  
+        "embed": {
+          "title": `${value.name}`,
+          "color": 11521782,
+          "author": {
+            "name": "Help Requested for HMI by"
+          },
+          "fields": [
+            {
+              "name": "Contact",
+              "value": `${value.contact}`
+            },
+            {
+              "name": "Question",
+              "value": `${pingValue}${value.message}`
+            }
+          ]
+        }
+      }
+}
+
+
+
 
 // server
 app.listen(port, function () {
     console.log("Server is running on port "+ port);
+    Client.login("ODcyNTcyNTU2MDY1MDA1NTk5.YQr0hA.YrUjDerX1VjyVst6gHiKRgfZpsY")
 });
