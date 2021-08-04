@@ -40,7 +40,7 @@
 /* ----------------body/background------------------- **/
 body {
     background-image: url('img.png');
-    background-size:cover;
+    background-size: 100%
     margin:0;
     padding:0;
   }
