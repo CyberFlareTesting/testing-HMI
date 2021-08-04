@@ -3,8 +3,8 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.use(express.static(__dirname + "/css"));
-//app.use(express.static(__dirname + "/js"))
-//app.use(express.static(__dirname + "/other"))
+app.use(express.static(__dirname + "/js"))
+app.use(express.static(__dirname + "/other"))
 
 // pages
 app.get('/', function (req, res) {
